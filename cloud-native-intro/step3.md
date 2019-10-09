@@ -56,9 +56,10 @@ You can implement many checks as part of your service and their outcomes are agg
 
 Feel free to try each of these endpoints. You'll see there's a default `/health/live` endpoint that always reports as UP.
 
-http://localhost:9080/health/ready
 
-http://localhost:9080/health/live
+https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/ready
 
-http://localhost:9080/health
+https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/live
+
+https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health
 
