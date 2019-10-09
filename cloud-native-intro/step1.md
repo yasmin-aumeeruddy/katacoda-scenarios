@@ -7,8 +7,8 @@ Every JVM needs a class library, and most people don't want to build their own J
 
 Run the command: 
 
-'which java'{{execute}}
+'which java' {{execute}}
 
 To find out more about the Java you have installed, run: 
 
-'java -version'{{java-version}}
+'java -version' {{execute}}
