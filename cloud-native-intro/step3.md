@@ -8,7 +8,7 @@ The tutorial code shows example use of MicroProfile Health and Metrics.
 
 When you started Open Liberty, it wrote out a number of available endpoints. One of those is the health endpoint for the application: 
 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/.
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health">http://localhost:9080/health
 
 The MicroProfile health for this application has an overall "outcome" which is determined by the outcome of any available individual health "checks". If any of those checks are "DOWN" then the overall outcome is considered to be "DOWN".
 
@@ -41,15 +41,15 @@ A readiness check will typically check the availability of resources the service
 
 You can implement many checks as part of your service and their outcomes are aggregated at the `/health/ready` endpoint:
 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/ready
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/ready">http://localhost:9080/health/ready
 
 Liveness checks are aggregated at `/health/live`. You'll see there's a default `/health/live` endpoint that always reports as UP:
 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/live
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/live">http://localhost:9080/health/live
 
 All checks are aggregated at `/health`:
 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health">http://localhost:9080/health
 
 
 #### MicroProfile Metrics
