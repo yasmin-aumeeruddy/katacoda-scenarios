@@ -6,7 +6,7 @@ The tutorial code shows example use of MicroProfile Health and Metrics.
 
 ### MicroProfile Health
 
-When you started Open Liberty, it wrote out a number of available endpoints. One of those is the health endpoint for the application: http://localhost:9080/health/.
+When you started Open Liberty, it wrote out a number of available endpoints. One of those is the health endpoint for the application: https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/.
 
 Open the health endpoint in a browser and you should see:
 
