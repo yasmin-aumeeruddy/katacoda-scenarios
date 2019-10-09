@@ -6,6 +6,11 @@
   "details": {
     "steps": [
       {
+        "title": "",
+        "text": "step1.md",
+        "code": "intro.sh"
+      },
+      {
         "title": "Step 1",
         "text": "step1.md"
       },
@@ -38,6 +43,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "java"
   }
 }
