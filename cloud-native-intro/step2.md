@@ -18,9 +18,3 @@ https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpse
 This displays a simple web page that provides a link to the microservice. On that page, click on the link to the greeting service. This will call the microservice URL: 
 
 https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe
-
-The response should look like:
-{
-    "message": "Hello",
-    "name": "John Doe"
-}
