@@ -47,9 +47,7 @@ and add the following line:
 
 `<mpMetrics authentication="false" />`{{copy}}
 
-Rebuild and start the server: 
-
-Enter `ctrl` + `C` into the terminal
+Rebuild and start the server by typing `ctrl` + `C` in to the terminal and then running the following command: 
 
 `mvn package liberty:run`{{execute}}
 
@@ -75,30 +73,21 @@ Externalizing configuration is one of the key tenets of <a href="https://12facto
 
 The tutorial application has also included the use of MicroProfile Config for injecting a configuration property using `@ConfigProperty`.  Open Liberty supports a number of `config sources`.  The tutorial shows the use of Open Liberty `bootstrap.properties`.  
 
-The `pom.xml` file contains the following configuration for the greeting:
-
-```XML
-<bootstrapProperties>
-    ...
-    <greetingServiceGreeting>Hello</greetingServiceGreeting>
-</bootstrapProperties>
-```
-
-The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`{{open}}
+Line 98 of the`/open-cloud-native-intro/pom.xml`{{open}} file contains the configuration for the greeting. The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`{{open}}
 
 This file is read at server startup and the value injected into the `GreetingService` bean when it is created.
+Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to change the greeting to `Bonjour`.
 
-Edit the `/open-cloud-native-intro/pom.xml`{{open}} and change the greeting to `Bonjour` on line 98.
+`<greetingServiceGreeting>Hello</greetingServiceGreeting>`{{copy}}
 
-Stop the server:
-`^C`{{execute}}
+Stop the server by typing `ctrl` + `C` in to the terminal.
 
 Start it again: 
 `mvn liberty:run`{{execute}}
 
 *Note: if you trigger a rebuild, the integration test will fail as it's expecting the response message to be "Hello". However, the server will still build and run.*
 
-Call the service again to see the greeting change: <a href="https://[[HOST_SUBDOMAIN]]-9443-[[KATACODA_HOST]].environments.katacoda.com/metrics/application">http://localhost:9080/mpservice/greeting/hello/John%20Doe</a>
+Call the service again to see the greeting change: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/application">http://localhost:9080/mpservice/greeting/hello/John%20Doe</a>
 
 This example shows static config injection, where the configuration is read at server start-up.  MicroProfile and Open Liberty also support dynamic configuration injection which means the configuration is re-read periodically (e.g. every 500ms) and so does not require a server restart.
 
