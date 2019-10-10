@@ -49,7 +49,8 @@ and add the following line:
 
 Rebuild and start the server: 
 
-`^C`{{execute}}
+Enter `ctrl` + `C` into the terminal
+
 `mvn package liberty:run`{{execute}}
 
 Now when you access the metrics endpoint you will be able to access it over http and not be asked to authenticate: 
