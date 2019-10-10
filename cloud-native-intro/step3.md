@@ -57,7 +57,7 @@ The MicroProfile system metrics, for example, JVM heap, cpu, and garbage collect
 
 The tutorial application also shows a MicroProfile application metric in the microservice implementation: 
 
-src/main/java/my/demo/GreetingService.java{{open}}
+`/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}}
 
 The `@Timed` annotation is an example of one of a number of MicroProfile metric types.  This metric produces timing information for the execution of the `sayHello` service method.  Other metrics include counting method access to measure load, or gauges for custom measurement. 
 
@@ -65,7 +65,7 @@ Access the service endpoint to cause some application measurements to be recorde
 
 These measurement will be available at the `/metrics` endpoint, but you can also just see the applications metrics at: <a href="https://[[HOST_SUBDOMAIN]]-9443-[[KATACODA_HOST]].environments.katacoda.com/metrics/application">https://localhost:9443/metrics/application</a>.
 
-### MicroProfile Config
+#### MicroProfile Config
 
 Externalizing configuration is one of the key tenets of <a href="https://12factor.net/">12-factor applications</a>. Externalizing everything that varies between deployments into configuration means you can build once and deploy in the many stages of your DEvOps pipeline, thus removing the risk of your application changing between deployments and invalidating previous testing.  
 
@@ -80,23 +80,17 @@ The `pom.xml` file contains the following configuration for the greeting:
 </bootstrapProperties>
 ```
 
-The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`
+The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`{{open}}
 
-```
-greetingServiceGreeting=Hello
-```
+This file is read at server startup and the value injected into the `GreetingService` bean when it is created.
 
-This file is read at server startup and the value injected into the GreetingService bean when it is created.
+Edit the `/open-cloud-native-intro/pom.xml`{{open}} and change the greeting to `Bonjour` on line 98.
 
-Edit the pom.xml file and change the greeting to `Bonjour`
+Stop the server:
+`^C`{{execute}}
 
-```XML
-<bootstrapProperties>
-    ...
-    <greetingServiceGreeting>Bonjour</greetingServiceGreeting>
-</bootstrapProperties>
-```
-Stop the server (e.g. `Ctrl-C`) and start it again: `mvn liberty:run`.
+Start it again: 
+`mvn liberty:run`{{execute}}
 
 *Note: if you trigger a rebuild, the integration test will fail as it's expecting the response message to be "Hello". However, the server will still build and run.*
 
