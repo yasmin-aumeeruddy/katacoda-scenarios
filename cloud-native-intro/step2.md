@@ -13,8 +13,8 @@ Building the application (`mvn install`) also downloads Open Liberty from Maven 
 Note: you will see some warnings from the server relating to SSL configuration. These are expected and will be addressed later.
 
 To see what the app does, open a web browser at the following URL: 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice">http://localhost:9080/mpservice</a>
 
 This displays a simple web page that provides a link to the microservice. On that page, click on the link to the greeting service. This will call the microservice URL: 
 
-https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe">http://localhost:9080/mpservice/mpservice/greeting/hello/John%20Doe</a>
