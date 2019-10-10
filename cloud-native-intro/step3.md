@@ -57,7 +57,7 @@ The MicroProfile system metrics, for example, JVM heap, cpu, and garbage collect
 
 The tutorial application also shows a MicroProfile application metric in the microservice implementation: 
 
-`src/main/java/my/demo/GreetingService.java`{{open}}
+src/main/java/my/demo/GreetingService.java{{open}}
 
 The `@Timed` annotation is an example of one of a number of MicroProfile metric types.  This metric produces timing information for the execution of the `sayHello` service method.  Other metrics include counting method access to measure load, or gauges for custom measurement. 
 
