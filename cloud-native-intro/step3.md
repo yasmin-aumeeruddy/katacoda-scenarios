@@ -41,7 +41,7 @@ When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics:
 The MicroProfile Metrics feature allows you to turn off the security requirements.  This makes it easier to test out Metrics, but is not intended for production systems.
 
 Edit the source server configuration: 
-`src/main/liberty/config/server.xml`{{open}}
+`/open-cloud-native-intro/src/main/liberty/config/server.xml`{{open}}
 
 and add the following line:
 
@@ -80,7 +80,7 @@ The `pom.xml` file contains the following configuration for the greeting:
 </bootstrapProperties>
 ```
 
-The maven build puts this value in: `target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`
+The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`
 
 ```
 greetingServiceGreeting=Hello
@@ -159,7 +159,7 @@ The second link is to a web page that gives a human-readable representation of t
 
 The machine-readable and Web page API descriptions are created automatically from the JAX-RS definition with no additional work required.  As a result, the information provided for your service is pretty basic.  One of the things MicroProfile OpenAPI provides is a number of annotations to enable you to provide better API documentation.
 
-Edit the `src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation:
+Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation:
 
 ```Java
    ...
