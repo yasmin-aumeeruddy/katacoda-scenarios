@@ -15,7 +15,7 @@ The MicroProfile health for this application has an overall "outcome" which is d
 As well as returning a JSON description of the health outcome, the health endpoint also reflects the outcome in the http response code. An outcome of "UP" returns a 200 OK, whereas an outcome of "DOWN" returns a 503 Service Unavailable. This means the endpoint can be hooked up to Kubernetes liveness or readiness probes to reflect the service availability.
 
 The tutorial application health has one "check". This is implemented in 
-src/main/java/my/demo/health/GreetingReadinessCheck.java {{open}}
+`src/main/java/my/demo/health/GreetingReadinessCheck.java`{{open}}
 
 MicroProfile supports two types of health checks: readiness and liveness. These match the health checks supported by deployment environments like Kubernetes and, indeed, the MicroProfile Health APIs have been designed to integrate perfectly and Kubernetes liveness and readiness probes.
 
@@ -41,7 +41,7 @@ When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics:
 The MicroProfile Metrics feature allows you to turn off the security requirements.  This makes it easier to test out Metrics, but is not intended for production systems.
 
 Edit the source server configuration: 
-`src/main/liberty/config/server.xml` {{open}}
+`src/main/liberty/config/server.xml`{{open}}
 
 and add the following line:
 
