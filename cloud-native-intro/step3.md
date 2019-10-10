@@ -40,27 +40,18 @@ When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics:
 
 The MicroProfile Metrics feature allows you to turn off the security requirements.  This makes it easier to test out Metrics, but is not intended for production systems.
 
-Edit the source server configuration: `src/main/liberty/config/server.xml` and add the following line:
+Edit the source server configuration: 
+`src/main/liberty/config/server.xml` {{open}}
 
-```XML
-    <mpMetrics authentication="false" /> 
-```
+and add the following line:
+
+`<mpMetrics authentication="false" />`{{copy}}
 
 Rebuild and start the server: 
 
 `mvn package liberty:run`{{execute}}
 
 Now when you access the metrics endpoint you will be able to access it over http and not be asked to authenticate.
-
-You should now see metrics data like this:
-
-```
-# TYPE base:classloader_total_loaded_class_count counter
-# HELP base:classloader_total_loaded_class_count Displays the total number of classes that have been loaded since the Java virtual machine has started execution.
-base:classloader_total_loaded_class_count 8807
-# TYPE base:cpu_system_load_average gauge
-...
-```
 
 The MicroProfile system metrics, for example, JVM heap, cpu, and garbage collection information, don't require any additional coding - they're produced automatically from the JVM.  The metrics data is in <a href="https://prometheus.io">Prometheus</a> format, the default for MicroProfile.  Using an `Accept` header on the request, you can also receive json format (not show in this tutorial).
 
