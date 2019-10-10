@@ -15,7 +15,7 @@ The MicroProfile health for this application has an overall "outcome" which is d
 As well as returning a JSON description of the health outcome, the health endpoint also reflects the outcome in the http response code. An outcome of "UP" returns a 200 OK, whereas an outcome of "DOWN" returns a 503 Service Unavailable. This means the endpoint can be hooked up to Kubernetes liveness or readiness probes to reflect the service availability.
 
 The tutorial application health has one "check". This is implemented in 
-`src/main/java/my/demo/health/GreetingReadinessCheck.java`{{open}}
+`cloud-native-intro/src/main/java/my/demo/health/GreetingReadinessCheck.java`{{open}}
 
 MicroProfile supports two types of health checks: readiness and liveness. These match the health checks supported by deployment environments like Kubernetes and, indeed, the MicroProfile Health APIs have been designed to integrate perfectly and Kubernetes liveness and readiness probes.
 
@@ -36,7 +36,7 @@ All checks are aggregated at `/health`:
 
 #### MicroProfile Metrics
 
-When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">http://localhost:9080/metrics/</a>. If you tried to access the endpoint you will have found that it requires security configuration to work.  The Metrics endpoint is only available over https and, by default, also requires an authorized user in order to prevent disclosing potentially sensitive information.
+When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">https://localhost:9080/metrics/</a>. If you tried to access the endpoint you will have found that it requires security configuration to work.  The Metrics endpoint is only available over https and, by default, also requires an authorized user in order to prevent disclosing potentially sensitive information.
 
 The MicroProfile Metrics feature allows you to turn off the security requirements.  This makes it easier to test out Metrics, but is not intended for production systems.
 
