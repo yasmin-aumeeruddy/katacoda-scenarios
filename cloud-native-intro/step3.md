@@ -36,7 +36,7 @@ All checks are aggregated at `/health`:
 
 #### MicroProfile Metrics
 
-When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">https://localhost:9080/metrics/</a>. If you tried to access the endpoint you will have found that it requires security configuration to work.  The Metrics endpoint is only available over https and, by default, also requires an authorized user in order to prevent disclosing potentially sensitive information.
+When you started Open Liberty it wrote out an endpoint for MicroProfile Metrics: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">http://localhost:9080/metrics/</a>. If you tried to access the endpoint you will have found that it requires security configuration to work.  The Metrics endpoint is only available over https and, by default, also requires an authorized user in order to prevent disclosing potentially sensitive information.
 
 The MicroProfile Metrics feature allows you to turn off the security requirements.  This makes it easier to test out Metrics, but is not intended for production systems.
 
@@ -49,9 +49,12 @@ and add the following line:
 
 Rebuild and start the server: 
 
+`^C`{{execute}}
 `mvn package liberty:run`{{execute}}
 
-Now when you access the metrics endpoint you will be able to access it over http and not be asked to authenticate.
+Now when you access the metrics endpoint you will be able to access it over http and not be asked to authenticate: 
+
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">http://localhost:9080/metrics/</a>.
 
 The MicroProfile system metrics, for example, JVM heap, cpu, and garbage collection information, don't require any additional coding - they're produced automatically from the JVM.  The metrics data is in <a href="https://prometheus.io">Prometheus</a> format, the default for MicroProfile.  Using an `Accept` header on the request, you can also receive json format (not show in this tutorial).
 
