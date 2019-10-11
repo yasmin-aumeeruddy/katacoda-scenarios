@@ -78,7 +78,7 @@ Line 98 of the`/open-cloud-native-intro/pom.xml`{{open}} file contains the confi
 This file is read at server startup and the value injected into the `GreetingService` bean when it is created.
 Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to change the greeting to `Bonjour`.
 
-`<greetingServiceGreeting>Hello</greetingServiceGreeting>`{{copy}}
+`<greetingServiceGreeting>Bonjour</greetingServiceGreeting>`{{copy}}
 
 Stop the server by typing `ctrl` + `C` in to the terminal.
 
@@ -93,7 +93,9 @@ This example shows static config injection, where the configuration is read at s
 
 #### MicroProfile OpenAPI
 
-When you started Open Liberty it wrote out two endpoints for MicroProfile OpenAPI: <a href="http://localhost:9080/openapi/">http://localhost:9080/openapi/</a> and <a href="http://localhost:9080/openapi/ui/">http://localhost:9080/openapi/ui/</a>.  Clicking on the first link displays a machine-readable yaml description of the service, the format of which is defined by the <a href="https://www.openapis.org/">OpenAPI Initiative</a>.  
+When you started Open Liberty it wrote out two endpoints for MicroProfile OpenAPI:
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a> and <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/ui/">http://localhost:9080/openapi/ui/</a>.  
+Clicking on the first link displays a machine-readable yaml description of the service, the format of which is defined by the <a href="https://www.openapis.org/">OpenAPI Initiative</a>.  
 
 ```YAML
 openapi: 3.0.0
@@ -163,7 +165,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 
 If your service is not running and your IDE does not automatically recompile the class, re-run your build and start the server:
 
-`mvn compile liberty:run`
+`mvn compile liberty:run`{{execute}}
 
 Browse the OpenAPI endpoint <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a>
 
