@@ -109,11 +109,9 @@ The machine-readable and Web page API descriptions are created automatically fro
 Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation after line 44:
 
 <pre class="file" data-target="clipboard">
-Copy Me To The Clipboard!!
    @Operation(
         summary = "Get a greeting",
         description = "Returns a greeting for the provided name.")
-```
 </pre>
 
 You'll also need to add the package import for the annotation:
