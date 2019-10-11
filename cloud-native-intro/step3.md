@@ -108,7 +108,11 @@ The machine-readable and Web page API descriptions are created automatically fro
 
 Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation after line 44:
 
-`@Operation(summary = "Get a greeting", description = "Returns a greeting for the provided name.")`{{copy}}
+<pre data-target="clipboard">
+    @Operation(
+         summary = "Get a greeting",
+         description = "Returns a greeting for the provided name.")
+</pre>
 
 You'll also need to add the package import for the annotation on line 25:
 
@@ -122,16 +126,10 @@ Browse the OpenAPI endpoint <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_
 
 You'll see that your API now has additional documentation:
 
-```yaml
-...
-  /greeting/hello/{name}:
-    get:
-      summary: Get a greeting
-      description: Returns a greeting for the provided name.
-      operationId: sayHello
-      parameters:
-...
-```
+Stop the server by typing `ctrl` + `C` in to the terminal.
+
+Start it again: 
+`mvn liberty:run`{{execute}}
 
 There are additional annotations available to help you document the parameters and more.
 
