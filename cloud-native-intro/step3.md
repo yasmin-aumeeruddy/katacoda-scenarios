@@ -116,9 +116,7 @@ Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{
 
 You'll also need to add the package import for the annotation:
 
-```Java
-import org.eclipse.microprofile.openapi.annotations.Operation;
-```
+import org.eclipse.microprofile.openapi.annotations.Operation; {{copy}}
 
 If your service is not running and your IDE does not automatically recompile the class, re-run your build and start the server:
 
