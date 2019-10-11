@@ -93,69 +93,28 @@ This example shows static config injection, where the configuration is read at s
 
 #### MicroProfile OpenAPI
 
-When you started Open Liberty it wrote out two endpoints for MicroProfile OpenAPI:
-<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a> and <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/ui/">http://localhost:9080/openapi/ui/</a>.  
-Clicking on the first link displays a machine-readable yaml description of the service, the format of which is defined by the <a href="https://www.openapis.org/">OpenAPI Initiative</a>.  
+When you started Open Liberty it wrote out two endpoints for MicroProfile OpenAPI. Clicking on the first link displays a machine-readable yaml description of the service, the format of which is defined by the <a href="https://www.openapis.org/">OpenAPI Initiative</a>.
 
-```YAML
-openapi: 3.0.0
-info:
-  title: Deployed APIs
-  version: 1.0.0
-servers:
-- url: http://localhost:9080/mpservice
-- url: https://localhost:9443/mpservice
-paths:
-  /greeting/hello/{name}:
-    get:
-      operationId: sayHello
-      parameters:
-      - name: name
-        in: path
-        required: true
-        schema:
-          type: string
-      responses:
-        default:
-          description: default response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Greeting'
-components:
-  schemas:
-    Greeting:
-      type: object
-      properties:
-        message:
-          type: string
-        name:
-          type: string
-```
+This yaml form of the API can be used by API Gateways or generators for clients to work with your service - for example, to generate client code to call your service.  A number of generators are available for a variety of languages:
 
-This yaml form of the API can be used by API Gateways or generators for clients to work with your service - for example, to generate client code to call your service.  A number of generators are available for a variety of languages.
+
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a> and 
 
 The second link is to a web page that gives a human-readable representation of the API and also allows you to browse and call the API.  
 
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/ui/">http://localhost:9080/openapi/ui/</a>.  
+
 The machine-readable and Web page API descriptions are created automatically from the JAX-RS definition with no additional work required.  As a result, the information provided for your service is pretty basic.  One of the things MicroProfile OpenAPI provides is a number of annotations to enable you to provide better API documentation.
 
-Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation:
+Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation after line 44:
 
-```Java
-   ...
-    @GET
-    @Path("/{name}")
-    @Produces(MediaType.APPLICATION_JSON)
-    @Timed(name = "sayHelloTime", displayName = "Call duration", 
-           description = "Time spent in call")
-    @Operation(
+<pre class="file" data-target="clipboard">
+Copy Me To The Clipboard!!
+   @Operation(
         summary = "Get a greeting",
         description = "Returns a greeting for the provided name.")
-    public Greeting sayHello(@PathParam("name") String name) {
-        return new Greeting(greetingStr, name);
-    }
-    ...
 ```
+</pre>
 
 You'll also need to add the package import for the annotation:
 
