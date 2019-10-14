@@ -25,7 +25,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "courseData": "pre.sh"
+      "courseData": "pre.sh",
+      "code": "javaPath.sh"
     },
     "finish": {
       "text": "finish.md"
