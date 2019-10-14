@@ -7,6 +7,8 @@ Every JVM needs a class library, and most people don't want to build their own J
 
 Run the command: 
 
+`export PATH=$JAVA_HOME/jre/bin:$PATH` {{execute}}
+
 `which java`{{execute}}
 
 To find out more about the Java you have installed, run: 
