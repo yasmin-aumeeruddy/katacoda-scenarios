@@ -8,7 +8,6 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "code": "pre.sh"
       },
       {
         "title": "Step 2",
@@ -24,7 +23,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "pre.sh"
     },
     "finish": {
       "text": "finish.md"
