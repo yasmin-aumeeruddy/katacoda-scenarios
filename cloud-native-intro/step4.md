@@ -12,7 +12,11 @@ The project's maven pom file includes a maven profile for building a usr package
 
 `mvn -P usr-package install`{{execute}}
 
-This results in a server zip package: `target/defaultServer.zip`.  In the `usr-package` build we also use the name `defaultServer` for the server because this is the name of the server the base Liberty Docker images automatically runs when the container is started.
+This results in a server zip package:
+
+`target/defaultServer.zip`{{open}}
+
+In the `usr-package` build we also use the name `defaultServer` for the server because this is the name of the server the base Liberty Docker images automatically runs when the container is started.
 
 #### Build and run in Docker
 
