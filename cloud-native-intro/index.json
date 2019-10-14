@@ -8,7 +8,7 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "courseData": "pre.sh"
+        "code": "javaPath.sh"
       },
       {
         "title": "Step 2",
@@ -24,7 +24,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "pre.sh"
     },
     "finish": {
       "text": "finish.md"
