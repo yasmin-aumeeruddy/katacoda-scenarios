@@ -16,16 +16,12 @@ This results in a server zip package: `target/defaultServer.zip`.  In the `usr-p
 
 In the directory where the `Dockerfile` is located run: 
 
-`cd /cloud-native-intro/ docker build -t my-demo:mpservice .` {{execute}}
+`cd /cloud-native-intro/ docker build -t my-demo:mpservice .`{{execute}}
 
 If the server is already running, stop it by entering `Ctrl` + `C`
 
-Run the docker image: `docker run -p 9080:9080 -p 9443:9443 my-demo:mpservice` {{execute}}
+Run the docker image: `docker run -p 9080:9080 -p 9443:9443 my-demo:mpservice`{{execute}}
 
 Because the service is running in docker you need to access it on 127.0.0.1: <a href="http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe">http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe</a>
 
 Note: the `open-liberty` image referenced in the Dockerfile is based on IBM Java (built on Open J9) because we wanted to re-use the official Open Liberty Docker image. Creating an image based on Open J9 would be relatively straightforward.
-
-## Summary
-
-Congratulations, you've have built, a cloud-native application, seen how you can monitor it for health and metrics, change it's configuration, and package and run it in Docker, ready for deployment to your cloud of choice.  I recommend IBM Cloud or IBM Cloud Private, of course ;)
