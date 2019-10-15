@@ -25,12 +25,12 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "pre.sh"
     },
     "finish": {
       "text": "finish.md"
     }
-  ],
   },
   "environment": {
     "uilayout": "editor-terminal"
