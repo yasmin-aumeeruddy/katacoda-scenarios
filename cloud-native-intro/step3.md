@@ -108,15 +108,11 @@ The machine-readable and Web page API descriptions are created automatically fro
 
 Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation after line 44:
 
-<pre class="file" data-target="clipboard">
-   @Operation(
-        summary = "Get a greeting",
-        description = "Returns a greeting for the provided name.")
-</pre>
+`@Operation(summary = "Get a greeting", description = "Returns a greeting for the provided name.")`{{copy}
 
 You'll also need to add the package import for the annotation on line 25:
 
-import org.eclipse.microprofile.openapi.annotations.Operation;{{copy}}
+`import org.eclipse.microprofile.openapi.annotations.Operation;`{{copy}}
 
 Re-run your build and start the server by entering 'ctrl' + 'C' in to the terminal and:
 
@@ -137,7 +133,7 @@ You'll see that your API now has additional documentation:
 ...
 ```
 
-Stop the server by entering 'ctrl' + 'C' in to the terminal. 
+Stop the server by entering `ctrl` + `C` in to the terminal. 
 
 There are additional annotations available to help you document the parameters and more.
 
