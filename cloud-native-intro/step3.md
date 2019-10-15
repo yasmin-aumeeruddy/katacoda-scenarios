@@ -137,6 +137,8 @@ You'll see that your API now has additional documentation:
 ...
 ```
 
+Stop the server by entering 'ctrl' + 'C' in to the terminal. 
+
 There are additional annotations available to help you document the parameters and more.
 
 #### Further Reading
