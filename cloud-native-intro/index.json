@@ -7,9 +7,7 @@
 		"steps": [
 			{
 				"title": "Step 1",
-				"text": "step1.md",
-				"courseData": "pre.sh",
-				"code": "javaPath.sh"
+				"text": "step1.md"
 			},
 			{
 				"title": "Step 2",
