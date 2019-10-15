@@ -26,6 +26,6 @@ In the directory where the `Dockerfile` is located run:
 
 Run the docker image: `docker run -p 9080:9080 -p 9443:9443 my-demo:mpservice`{{execute}}
 
-Because the service is running in docker you need to access it on 127.0.0.1: <a href="http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe">http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe</a>
+Because the service is running in docker you need to access it on 127.0.0.1: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe">http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe</a>
 
 Note: the `open-liberty` image referenced in the Dockerfile is based on IBM Java (built on Open J9) because we wanted to re-use the official Open Liberty Docker image. Creating an image based on Open J9 would be relatively straightforward.
