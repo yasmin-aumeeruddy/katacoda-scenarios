@@ -4,7 +4,8 @@
 	"difficulty": "Intermediate",
 	"time": "45",
 	"details": {
-		"steps": [{
+		"steps": [
+			{
 				"title": "Step 1",
 				"text": "step1.md",
 				"courseData": "pre.sh",
