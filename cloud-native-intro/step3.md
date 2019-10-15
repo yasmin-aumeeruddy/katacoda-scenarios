@@ -114,11 +114,11 @@ Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{
         description = "Returns a greeting for the provided name.")
 </pre>
 
-You'll also need to add the package import for the annotation:
+You'll also need to add the package import for the annotation on line 25:
 
-import org.eclipse.microprofile.openapi.annotations.Operation; {{copy}}
+import org.eclipse.microprofile.openapi.annotations.Operation;{{copy}}
 
-If your service is not running and your IDE does not automatically recompile the class, re-run your build and start the server:
+Re-run your build and start the server by entering 'ctrl' + 'C' in to the terminal and:
 
 `mvn compile liberty:run`{{execute}}
 
