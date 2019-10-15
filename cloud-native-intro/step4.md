@@ -24,8 +24,6 @@ In the directory where the `Dockerfile` is located run:
 
 `docker build -t my-demo:mpservice .`{{execute}}
 
-If the server is already running, stop it by entering `Ctrl` + `C`
-
 Run the docker image: `docker run -p 9080:9080 -p 9443:9443 my-demo:mpservice`{{execute}}
 
 Because the service is running in docker you need to access it on 127.0.0.1: <a href="http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe">http://127.0.0.1:9080/mpservice/greeting/hello/John%20Doe</a>
